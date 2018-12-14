@@ -24,15 +24,16 @@ and you are ready to go, just visit [http://localhost](http://localhost) and you
 ### PHP Version:
 
 ```bash
-PHP 7.1.6 (cli) (built: Jun  9 2017 13:44:25) ( NTS )
-Copyright (c) 1997-2017 The PHP Group
-Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
-    with Zend OPcache v7.1.6, Copyright (c) 1999-2017, by Zend Technologies
+PHP 7.2.13 (cli) (built: Dec  7 2018 16:12:01) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+    with Zend OPcache v7.2.13, Copyright (c) 1999-2018, by Zend Technologies
+
 ```
 
 ### NginX Version:
 ```bash
-nginx version: nginx/1.12.0
+nginx version: nginx/1.14.2
 ```
 
 
@@ -82,7 +83,7 @@ This image comes with this preinstalled php extensions:
 ### Composer 
 
 ```
-Composer version 1.5-dev (27b8209990abae71433e71363cc459b02e21bfc4) 2017-06-19 15:04:16
+Composer version 1.8.0 2018-12-03 10:31:16
 ```
 
 ## Extending

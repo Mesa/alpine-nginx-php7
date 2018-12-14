@@ -34,6 +34,7 @@ RUN apk add --no-cache \
     php7-zip \
     php7-zlib \
     supervisor \
+    unzip \
     curl
 
 # Copy configuration

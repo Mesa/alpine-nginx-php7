@@ -1,11 +1,14 @@
-version: '3'
+version: '3.3'
 
 services:
     web:
-        image:          mesa/alpine-nginx-php7:${CONTAINER_VERSION}
-        container_name: mesa-nginx
+        image: mesa/alpine-nginx-php7:${CONTAINER_VERSION}
         build: ./
+        container_name: mesa-nginx
         ports:
             - "80:80"
-        volumes:
-            - ./var/www:/var/www
+networks:
+    default:
+        driver: bridge
+        driver_opts:
+            com.docker.network.enable_ipv6: "false"

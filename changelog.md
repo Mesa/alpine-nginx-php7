@@ -1,9 +1,12 @@
 # Changelog
 
-## [Upcomming]
-- tbd.
+## [1.3.0] - 2018-12-20
+- added makefile
+- changed supervisor log and pid path
+- nginx is linstening on Ipv4 port 80 again by default
+- split supervisord config to multiple files
 
-## [1.1.1] - 2018-12-14
+## [1.2.0] - 2018-12-14
 ### Added
 - Added composer to container
 - Added php7-cli package

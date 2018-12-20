@@ -24,15 +24,12 @@ and you are ready to go, just visit [http://localhost](http://localhost) and you
 ### PHP Version:
 
 ```
-PHP 7.2.13 (cli) (built: Dec  7 2018 16:12:01) ( NTS )
-Copyright (c) 1997-2018 The PHP Group
-Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
-    with Zend OPcache v7.2.13, Copyright (c) 1999-2018, by Zend Technologies
+<?php include __DIR__ . '/php.txt'; ?>
 ```
 
 ### NginX Version:
 ```
-nginx version: nginx/1.14.2
+<?php include __DIR__ . '/nginx.txt'; ?>
 ```
 
 
@@ -40,51 +37,27 @@ nginx version: nginx/1.14.2
 
 This image comes with this preinstalled php extensions:
 
-### PHP Modules
-* bcmath
-* Core
-* ctype
-* curl
-* date
-* dom
-* filter
-* gd
-* hash
-* iconv
-* intl
-* json
-* libxml
-* mbstring
-* mcrypt
-* mysqlnd
-* openssl
-* pcre
-* PDO
-* pdo_mysql
-* pdo_sqlite
-* Phar
-* posix
-* readline
-* Reflection
-* session
-* SimpleXML
-* soap
-* SPL
-* standard
-* tokenizer
-* xml
-* xmlreader
-* xsl
-* Zend OPcache
-* zip
-* zlib
-### Zend Modules
-* Zend OPcache
+<?php
+    $lines = file(__DIR__ . '/php-packages.txt', FILE_IGNORE_NEW_LINES);
+    $lines = array_filter($lines);
+
+    foreach ($lines as $value) {
+
+        $value = str_replace(['[',']'], ['### ', ''] ,$value);
+
+        if (0 !== strpos($value, '#')) {
+            echo '* ' ;
+        }
+
+        echo $value . "\n";
+
+    }
+?>
 
 ### Composer 
 
 ```
-Composer version 1.8.0 2018-12-03 10:31:16
+<?php include __DIR__ . '/composer.txt'; ?>
 ```
 
 ## Extending

@@ -42,7 +42,6 @@ COPY etc/ /etc
 
 RUN chmod +x /etc/docker-entrypoint.sh
 
-COPY install_composer.sh /etc/install_composer.sh
 RUN chmod +x /etc/install_composer.sh ; \
     ./etc/install_composer.sh && \
     mv /usr/local/bin/composer.phar /usr/local/bin/composer
@@ -54,4 +53,4 @@ VOLUME /var/www
 EXPOSE 80
 
 ENTRYPOINT ["/etc/docker-entrypoint.sh"]
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]

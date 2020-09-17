@@ -1,4 +1,13 @@
-# Nginx and PHP7
+# Not Maintained Repository
+
+This repository is not maintained anymore, I ignored best practices for separating processes and merged all in one container. 
+
+Nowadays I recommend the separation of processes in own container for a reduced/loose coupling of Infrastructure.
+
+----
+
+## Nginx and PHP7
+
 An alpine linux based docker container with nginx and php7 (fpm) inside.
 Also composer is already included.
 
@@ -17,7 +26,7 @@ web:
 then run 
 
     docker-compose up
-    
+
 and you are ready to go, just visit [http://localhost](http://localhost) and you will see the output of phpinfo().
 
 
